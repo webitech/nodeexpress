@@ -7,7 +7,7 @@
         jscs = require('gulp-jscs'),
         nodemon = require('gulp-nodemon'),
         jsFiles = ['*.js', 'src/**/*.js'],
-        htmlFiles = ['*.js', 'src/**/*.js', 'src/views/*.*'],
+        htmlFiles = ['src/views/*.*'],
         livereload = require('gulp-livereload');
 
     gulp.task('style', function () {
@@ -64,9 +64,12 @@
                 watch: jsFiles
             };
         
+        livereload.listen({start: true});
+        
         return nodemon(options)
             .on('restart', function (ev) {
                 console.log('*************************** Restarting *************************** ');
+                livereload.reload();
             });
     });
     
