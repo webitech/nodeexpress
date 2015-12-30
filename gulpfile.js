@@ -56,7 +56,7 @@
     
     gulp.task('serve', ['style', 'inject', 'reload_html'], function () {
         var options = {
-                script: 'app.js',
+                script: 'nodeexpressapp.js',
                 delayTime: 1,
                 env: {
                     'PORT': 3000
