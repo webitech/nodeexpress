@@ -10,8 +10,8 @@ var router = function (lang) {
                     nav: [
                         {Link: '/Books', Text: 'Books'},
                         {Link: '/Authors', Text: 'Authors'}
-                    ]});
-        });
+                    ]});        
+        });    
 
     bookRouter.route('/:id')
         .get(function (req, res) {
